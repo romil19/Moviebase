@@ -1,0 +1,101 @@
+@use "../../scss/" as *;
+
+.footer {
+    position: relative;
+    padding-top: 4rem;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__content {
+        max-width: 1000px;
+
+        &__logo {
+            @include flex(center, center);
+            margin-bottom: 3rem;
+        }
+
+        &__menus {
+            display: column;
+            
+            text-align: center; 
+            font-size: 1.5rem;
+            font-weight: 600;
+           
+        }
+        &__email{
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: "montserrat";
+            margin-top: 2rem
+            
+        }
+        &__hr{
+            width: 30%;
+            background-color: white;
+            height: 2.5px;
+            border-radius: 2px;
+            margin:1rem 35%;
+            @include mobile{
+            width: 50%;
+            background-color: white;
+            height: 2.5px;
+            border-radius: 2px;
+            margin:1rem 25%;
+
+            }  
+        }
+        &__links{
+            display: flex;
+            justify-content: center;
+            color: white;
+            // font-size: 2rem;
+            &__link{
+                margin: 0 2rem;
+                margin-top: 1rem;
+            }
+        }
+        &__menu {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+            margin: 1rem 0 0 7rem;;
+             
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            & > * ~ * {
+                margin-top: 1rem;
+            }
+            @include mobile{
+                flex-direction: column;
+            margin: 1rem 0 0 4.5rem;;
+             
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            & > * ~ * {
+                margin-top: 1rem;
+            }
+            }
+        }
+    }
+    .footerbar{
+        margin: 4rem 0 0 0;
+        background-color: #242526;
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+     
+        @include mobile{
+         margin: 2rem 0 0 0;
+         background-color: #242526;
+         width: 100%;
+         padding: 0.3rem;
+         text-align: center;
+         padding-bottom: 2.5rem; ;
+         
+     }
+         
+     }
+}
+
